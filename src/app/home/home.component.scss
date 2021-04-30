@@ -10,18 +10,18 @@
   float: right;
 }
 
-#logoCorp{
+#ofertas{
   float: left;
   color: white;
   text-align: center;
   align-content: center;
-  padding: 14px 16px;
+  margin-left: 50px;
+  margin-top: 25px;
 }
 
-#logoCorp p{
-  font-size: 50px;
+#ofertas p{
+  font-size: 20px;
 }
-
 .menu li a {
   display: flex;
   color: white;
@@ -40,6 +40,29 @@
 
 .menu .active {
   background-color: #4CAF50;
+}
+
+#logoCorp{
+  float: left;
+  color: white;
+  text-align: center;
+  align-content: center;
+  margin-left: 25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#logoCorp a{
+  font-size: 50px;
+}
+
+#ofertas{
+  float: left;
+  color: white;
+  text-align: center;
+  align-content: center;
+  margin-left: 50px;
+  margin-top: 25px;
 }
 
 .main{
@@ -81,7 +104,7 @@
 }
 
 .mid{
-  background-image: url("https://i.pinimg.com/236x/1c/3f/fa/1c3ffa3f4a017c0fd0e528b91187b993.jpg");
+  background-image: url("https://images.footlocker.com/is/image/FLEU/317135040020_01?wid=630&hei=630&fmt=png-alpha");
   background-color: #cccccc;
   height: 600px;
   background-position: center;
@@ -107,23 +130,24 @@
 }
 
 .footer{
-    text-align: center;
-    padding: 20px;
-    background: rgba(19, 35, 47, .9);
-    position: relative;
-    bottom: 0;
+  text-align: center;
+  padding: 20px;
+  background: rgba(19, 35, 47, .9);
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer li{
-    list-style: none;
-    display: inline-block;
-    border-right: 3px solid white;
-    padding: 0px 7px;
-    font-size: 17px;
+  list-style: none;
+  display: inline-block;
+  border-right: 3px solid white;
+  padding: 0px 7px;
+  font-size: 17px;
 }
 
 .footer li:last-child{
-    border-right: none;
+  border-right: none;
 }
 
 .footer li a {
@@ -133,84 +157,149 @@
   padding: 14px 16px;
   text-decoration: none;
 }
-#search{
-    width: 350px;
-    height: 20px;
-    margin-right: auto;
-}
 #tituloCategorias{
-    text-align: center;
-    margin-left: auto;
-    font-size: 40px;
-    margin-top: 80px;
-    margin-bottom: 50px;
+  text-align: center;
+  margin-left: auto;
+  font-size: 40px;
+  margin-top: 80px;
+  margin-bottom: 50px;
 }
 #textoCategoria{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50px;
-    font-size: 17px;
-    width: 50%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  font-size: 17px;
+  width: 50%;
 }
 .Boletin{
-    display: flex;
-    justify-content: flex-start;
-    font-size: 15px;
-    padding: 30px;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 15px;
+  padding: 30px;
 }
 #imgBoletin{
-    width: 25%;
+  width: 25%;
+  height: 100%;
+  align-items: center;
 }
 #textoBoletin{
-    font-size: 40px;
-    margin-left: 40px;
-    margin-top: 100px;
+  font-size: 40px;
+  margin-left: 40px;
+  margin-top: 100px;
 }
 #search1{
-    width: 600px;
-    height: 50px;
-    margin-right: auto;
-    font-size: 20px;
+  width: 600px;
+  height: 50px;
+  margin-right: auto;
+  font-size: 20px;
 }
 #subBoton{
-    width: 150px;
-    height: 55px;
-    margin-left: 40px;
-    background-color: rgb(175, 175, 175);
-    font-size: 20px;
+  width: 150px;
+  height: 55px;
+  margin-left: 40px;
+  background-color: rgb(175, 175, 175);
+  font-size: 20px;
 }
 #tituloModelo{
-    font-size: 40px;
+  font-size: 40px;
 }
 #cajaModelo{
-    width: 25%;
+  width: 25%;
 }
 .modeloyproductos{
-    display: flex;
-    justify-content: flex-start;
-    padding: 40px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 40px;
 }
 .productos{
-    display: flex;
-    justify-content: flex-start;
-    margin-left: 100px;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 100px;
 }
 .card-title{
-    font-size: 20px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 .card{
     margin-left: 20px;
 }
 #searchBar{
-    width: 500px;
-    border-radius: 50px 50px  50px 50px;
-    height: 40px;
+  width: 500px;
+  border-radius: 50px 50px  50px 50px;
+  height: 40px;
 }
 #botonBuscar{
-    border-radius: 50px 50px  50px 50px;
+  border-radius: 50px 50px  50px 50px;
 }
 .checked {
-    color: orange;
-  }
+  color: orange;
+}
+.productosMobile{
+    display: none;
+}
+
+@media screen and (max-width: 830px) {
+    .productosMobile{
+        display: flex;
+        margin-top: 30px;
+    }
+    .productos{
+        display: none;
+    }
+    .modeloyproductos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+    #cajaModelo{
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+        text-align: center;
+        width: 50%;
+    }
+    #tituloModelo{
+        width: 100%;
+    }
+    #imgBoletin{
+        margin-top: 30px;
+    }
+    #textoBoletin{
+        margin-top: 20px;
+    }
+    #search1{
+        width: 100%;
+    }
+    #subBoton{
+        margin-left: 0px;
+    }
+    .categorias{
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+    .left{
+        position: flex-start;
+        width: 90%;
+    }
+    .mid{
+        position: flex-start;
+        width: 90%;
+        margin-top: 30px;
+    }
+    .right{
+        position: flex-start;
+        width: 90%;
+        margin-top: 30px;
+    }
+    #searchBar{
+        position: relative;
+        width: 90%;
+        min-width: 120px;
+    }
+    #botonBuscar{
+        margin-left: auto;
+    }
+}

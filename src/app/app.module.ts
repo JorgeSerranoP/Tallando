@@ -10,15 +10,28 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PedidoComponent } from './pedido/pedido.component';
+import { MatStepperModule } from '@angular/material/stepper';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatBadgeModule } from '@angular/material/badge';
 
+import { CarritoService } from './carrito.service';
+import { LOCALE_ID } from '@angular/core';
+import '@angular/common/locales/global/es';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CategoriasComponent,
-    OfertasComponent
+    OfertasComponent,
+    PedidoComponent
   ],
   imports: [
     BrowserModule,
@@ -26,9 +39,18 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatStepperModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatCardModule,
+    MatRadioModule,
+    MatDividerModule,
+    MatBadgeModule,
+    NgbModule
   ],
-  providers: [],
+  providers: [CarritoService, { provide: LOCALE_ID, useValue: 'es' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

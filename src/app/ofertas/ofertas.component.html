@@ -1,1 +1,112 @@
-<p>ofertas works!</p>
+<header>
+    <nav class="menu">
+        <ul>
+            <li id="logoCorp">
+                <a [routerLink]="['/']">T</a>
+            </li>
+            <li><a [routerLink]="['/pedido']">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon"
+                        matBadge="{{carritoService.productos.length}}">shopping_cart</mat-icon>Bolsa
+                </a></li>
+            <li><a>
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">favorite</mat-icon>Favoritos
+                </a></li>
+            <li><a>
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">account_circle</mat-icon>Iniciar sesion
+                </a></li>
+            <li><a>
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">search</mat-icon>Buscar
+                </a></li>
+        </ul>
+    </nav>
+</header>
+
+<p id="titulo">OFERTAS FUGACES</p>
+<div class="ofertasTable">
+    <div class="cardLeft" style="width: 18rem;">
+        <img [src]="carritoService.oferta1.imagen" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{carritoService.oferta1.nombre}}</h5>
+            <p class="card-text">{{carritoService.oferta1.descripcion}}</p>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <b>
+                <p class="card-text" style="color: red;">{{carritoService.oferta1.precio |
+                    currency:'EUR':'symbol':'1.0-1':'es'}}</p>
+            </b>
+            <button class="btn btn-primary" (click)="carritoService.add(carritoService.oferta1)">Comprar
+                ahora</button>
+        </div>
+    </div>
+    <div class="cardMid" style="width: 18rem;">
+        <img [src]="carritoService.oferta2.imagen" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{carritoService.oferta2.nombre}}</h5>
+            <p class="card-text">{{carritoService.oferta2.descripcion}}</p>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <b>
+                <p class="card-text" style="color: red;">{{carritoService.oferta2.precio |
+                    currency:'EUR':'symbol':'1.0-1':'es'}}</p>
+            </b>
+
+            <button class="btn btn-primary" (click)="carritoService.add(carritoService.oferta2)">Comprar
+                ahora</button>
+        </div>
+    </div>
+    <div class="cardRight" style="width: 18rem;">
+        <img [src]="carritoService.oferta3.imagen" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{carritoService.oferta3.nombre}}</h5>
+            <p class="card-text">{{carritoService.oferta3.descripcion}}</p>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <b>
+                <p class="card-text" style="color: red;">{{carritoService.oferta3.precio |
+                    currency:'EUR':'symbol':'1.0-1':'es'}}</p>
+            </b>
+            <button class="btn btn-primary" (click)="carritoService.add(carritoService.oferta3)">Comprar
+                ahora</button>
+        </div>
+    </div>
+</div>
+<p id="titulo"> LIQUIDACIÓN</p>
+<div class="ofertasCarousel">
+    <ngb-carousel>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img src="https://images.footlocker.com/is/image/FLEU/317135040020_01?wid=630&hei=630&fmt=png-alpha"
+                    alt="Random first slide">
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img src="https://images.footlocker.com/is/image/FLEU/317135040020_01?wid=630&hei=630&fmt=png-alpha"
+                    alt="Random second slide">
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img src="https://images.footlocker.com/is/image/FLEU/317135040020_01?wid=630&hei=630&fmt=png-alpha"
+                    alt="Random third slide">
+            </div>
+        </ng-template>
+    </ngb-carousel>
+</div>
+<footer class="footer">
+    <ul>
+        <li><a [routerLink]="['/']">Inicio</a></li>
+        <li><a>Acerca de</a></li>
+        <li><a>Tienda</a></li>
+        <li><a>Ayuda</a></li>
+    </ul>
+</footer>
