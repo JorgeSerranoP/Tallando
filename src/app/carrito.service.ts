@@ -69,6 +69,14 @@ export class CarritoService {
     this.total = this.subtotal + this.IVA;
     alert("Producto añadido al carrito");
   }
+
+  pagar() {
+    this.productos = [];
+    this.subtotal = 0;
+    this.IVA = 0;
+    this.total = 0;
+    alert("Su compra se harealizado con éxito");
+  }
 }
 
 export interface IProducto {
