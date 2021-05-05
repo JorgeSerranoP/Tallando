@@ -36,12 +36,12 @@
 </header>
 
 <body>
-    <mat-horizontal-stepper [linear]="false" #stepper>
-        <mat-step [stepControl]="firstFormGroup">
+    <mat-horizontal-stepper [linear]="true" #stepper>
+        <mat-step>
             <div class="flex-container-pedido">
                 <div class="flex-noResumen">
                     <h1>Tus productos</h1>
-                    <form [formGroup]="firstFormGroup">
+                    <form>
                         <ng-template matStepLabel>Vista previa</ng-template>
                         <div class="productosCarrito">
                             <ul>
